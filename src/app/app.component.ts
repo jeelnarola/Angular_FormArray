@@ -34,7 +34,10 @@ export class AppComponent {
     return this.fb.control('', [Validators.required, Validators.email]); // Add email validator here
   }
  addEmail(){
-  this.emails.push(this.emailcontroler())
+  const email=this.fb.group({
+    emailname:new FormControl('',[Validators.required,Validators.email])
+  })
+  this.emails.push(email)
  }
 
  addSkill(){

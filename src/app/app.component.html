@@ -18,7 +18,7 @@
         <label for="formGroupExampleInput2" class="form-label">Email :</label>
         <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder" class="inlien" formControlName="emailname" required>
         <button (click)="removeEmail(i)" class="m-2 badge bg-danger p-2">Remove Email</button>
-        <div *ngIf="emails?.invalid && emails?.touched">Email Required... </div>
+        <span *ngIf="emails.get('emailname')?.invalid && emails.get('emailname')?.touched" style="color: red;">Email Required... </span>
       </div>
     </div>
   </div>
